@@ -1,6 +1,6 @@
 import os
 
-DRIVER_PATH = os.path.join( os.path.dirname(__file__),"../chrome_driver/chromedriver.exe")
+DRIVER_PATH = "d:\\selenium\\chromedriver.exe"
 TEST_CASE = os.path.join( os.path.dirname(__file__),"../test_case")
 
 GY_UI_URL = 'http://qa.yansl.com/#/home'

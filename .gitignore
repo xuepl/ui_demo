@@ -5,3 +5,4 @@ venv/
 allure-results/
 reports/
 logs/
+chrome_driver/
