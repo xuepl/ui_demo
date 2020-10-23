@@ -19,7 +19,6 @@ def test_add_product_cate(driver):
     text = product_cate_page.get_message_text(driver)
     assert_tool.assert_in(text,"成功")
     home_page.close_product_cate(driver)
-    sleep(10)
 
 
 

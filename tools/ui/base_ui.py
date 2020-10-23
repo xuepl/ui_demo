@@ -54,7 +54,9 @@ class BaseUI(metaclass=SingLeton):
                 self.driver = webdriver.Firefox()
             elif browser == "chrome":
                 driver_path = DRIVER_PATH
-                self.driver = webdriver.Chrome(driver_path)
+                chrome_options = Options()
+                # chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
+                self.driver = webdriver.Chrome(executable_path = DRIVER_PATH,options=chrome_options)
                 self.driver.maximize_window()
                 self.wait_time()
             elif browser == "internet explorer" or browser == "ie":
@@ -64,13 +66,16 @@ class BaseUI(metaclass=SingLeton):
             elif browser == "chrome_headless":
                 chrome_options = Options()
                 chrome_options.add_argument('--headless')
-                self.driver = webdriver.Chrome(DRIVER_PATH,options=chrome_options)
+                chrome_options.add_argument('--disable-gpu')
+                # chrome_options.add_experimental_option('excludeSwitches',['enable-automation'])
+                self.driver = webdriver.Chrome(executable_path = DRIVER_PATH,options=chrome_options)
                 self.wait_time()
             elif browser == "chrome_debugger":
                 print("chrome_debugger模式")
                 chrome_options = Options()
                 chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9111")
-                self.driver = webdriver.Chrome(DRIVER_PATH, options=chrome_options)
+                # chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
+                self.driver = webdriver.Chrome(executable_path = DRIVER_PATH, options=chrome_options)
                 self.driver.maximize_window()
                 self.wait_time()
             elif browser == 'edge':
