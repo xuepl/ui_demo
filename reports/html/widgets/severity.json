@@ -1,0 +1,11 @@
+[ {
+  "uid" : "e61c1194859d1fb",
+  "name" : "新增商品分类",
+  "time" : {
+    "start" : 1603437692764,
+    "stop" : 1603437734889,
+    "duration" : 42125
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,25 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: 登录页面.用户名输入框定位元素超时，请检查定为语句是否正确，或者尝试其他定位方式",
+      "children" : [ {
+        "name" : "新增商品分类",
+        "uid" : "e61c1194859d1fb",
+        "parentUid" : "56d3dd863de9c45fd82f6d9009c797dd",
+        "status" : "broken",
+        "time" : {
+          "start" : 1603437692764,
+          "stop" : 1603437734889,
+          "duration" : 42125
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "56d3dd863de9c45fd82f6d9009c797dd"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

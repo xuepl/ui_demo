@@ -1,0 +1,25 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "商品模块",
+    "children" : [ {
+      "name" : "商品分类",
+      "children" : [ {
+        "name" : "新增商品分类",
+        "uid" : "e61c1194859d1fb",
+        "parentUid" : "5a021b81f987dfc19332594b2f073f8d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1603437692764,
+          "stop" : 1603437734889,
+          "duration" : 42125
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5a021b81f987dfc19332594b2f073f8d"
+    } ],
+    "uid" : "a8edc6483b6252864f5faf3ebf89770f"
+  } ]
+}

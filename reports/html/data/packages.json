@@ -1,0 +1,21 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "test_case.demo.test_product_cate",
+    "children" : [ {
+      "name" : "新增商品分类",
+      "uid" : "e61c1194859d1fb",
+      "parentUid" : "4bc251e018b42d47a5b5eeb1136656bd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1603437692764,
+        "stop" : 1603437734889,
+        "duration" : 42125
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "test_case.demo.test_product_cate"
+  } ]
+}

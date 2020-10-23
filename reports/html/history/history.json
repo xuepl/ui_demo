@@ -1,0 +1,22 @@
+{
+  "b295f374a57fbd17f2fdaa9d9fc3c0f8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e61c1194859d1fb",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: 登录页面.用户名输入框定位元素超时，请检查定为语句是否正确，或者尝试其他定位方式",
+      "time" : {
+        "start" : 1603437692764,
+        "stop" : 1603437734889,
+        "duration" : 42125
+      }
+    } ]
+  }
+}
