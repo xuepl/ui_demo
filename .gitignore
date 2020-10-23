@@ -1,0 +1,5 @@
+.idea/
+.git/
+.pytest_cache/
+venv/
+chromedriver.exe
