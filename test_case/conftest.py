@@ -15,9 +15,9 @@ chrome.exe --remote-debugging-port=9111 --user-data-dir="d:\selenium\data"
 @pytest.fixture(scope='session')
 def driver():
     pages = Pages(TEST_CASE)
-    pages.start_browser("chrome") # 正常模式
+    # pages.start_browser("chrome") # 正常模式
     # pages.start_browser("chrome_debugger") # debug模式
-    # pages.start_browser("chrome_headless")  # 无头模式
+    pages.start_browser("chrome_headless")  # 无头模式
     yield pages
     pages.quit()
 
