@@ -46,14 +46,14 @@ class BaseUI(metaclass=SingLeton):
         启动浏览器
         :param browser: 浏览器类型
         '''
+        print(DRIVER_PATH)
         if self.driver:
             log_tool.info("浏览器以启动，请勿再次启动浏览器。")
-            return
+            return self
         try:
             if browser == "firefox" or browser == "ff":
                 self.driver = webdriver.Firefox()
             elif browser == "chrome":
-                driver_path = DRIVER_PATH
                 chrome_options = Options()
                 # chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
                 self.driver = webdriver.Chrome(executable_path = DRIVER_PATH,options=chrome_options)
