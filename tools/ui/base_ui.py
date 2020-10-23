@@ -13,7 +13,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 
-from config.config import DRIVER_PATH
+from config.config import DRIVER_PATH, BROWSER_PATH
 from tools.report import log_tool
 from tools.report.retry_tool import retry
 from tools.security.type_tool import SingLeton
@@ -55,6 +55,7 @@ class BaseUI(metaclass=SingLeton):
                 self.driver = webdriver.Firefox()
             elif browser == "chrome":
                 chrome_options = Options()
+                chrome_options.binary_location(BROWSER_PATH)
                 # chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
                 self.driver = webdriver.Chrome(executable_path = DRIVER_PATH,options=chrome_options)
                 self.driver.maximize_window()
@@ -67,6 +68,7 @@ class BaseUI(metaclass=SingLeton):
                 chrome_options = Options()
                 chrome_options.add_argument('--headless')
                 chrome_options.add_argument('--disable-gpu')
+                chrome_options.binary_location(BROWSER_PATH)
                 # chrome_options.add_experimental_option('excludeSwitches',['enable-automation'])
                 self.driver = webdriver.Chrome(executable_path = DRIVER_PATH,options=chrome_options)
                 self.wait_time()
@@ -74,6 +76,7 @@ class BaseUI(metaclass=SingLeton):
                 print("chrome_debugger模式")
                 chrome_options = Options()
                 chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9111")
+                chrome_options.binary_location(BROWSER_PATH)
                 # chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
                 self.driver = webdriver.Chrome(executable_path = DRIVER_PATH, options=chrome_options)
                 self.driver.maximize_window()
