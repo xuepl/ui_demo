@@ -6,3 +6,4 @@ allure-results/
 reports/
 logs/
 chrome_driver/
+__pycache__/
