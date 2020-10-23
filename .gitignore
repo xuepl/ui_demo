@@ -2,3 +2,6 @@
 .git/
 .pytest_cache/
 venv/
+allure-results/
+reports/
+logs/
