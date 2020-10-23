@@ -46,7 +46,6 @@ class BaseUI(metaclass=SingLeton):
         启动浏览器
         :param browser: 浏览器类型
         '''
-        print(DRIVER_PATH)
         if self.driver:
             log_tool.info("浏览器以启动，请勿再次启动浏览器。")
             return self
@@ -68,6 +67,9 @@ class BaseUI(metaclass=SingLeton):
                 chrome_options = Options()
                 chrome_options.add_argument('--headless')
                 chrome_options.add_argument('--disable-gpu')
+                chrome_options.add_argument('--no-sandbox')
+                chrome_options.add_argument('--disable-dev-shm-usage')
+                chrome_options.add_argument("--window-size=1920,1080")
                 chrome_options.binary_location = BROWSER_PATH
                 # chrome_options.add_experimental_option('excludeSwitches',['enable-automation'])
                 self.driver = webdriver.Chrome(executable_path = DRIVER_PATH,options=chrome_options)
